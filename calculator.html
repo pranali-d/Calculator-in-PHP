@@ -1,0 +1,116 @@
+<html>
+
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+	</script>
+
+	<script>
+		$(document).ready(function() {
+			$("#result").toggleClass("result");
+
+			
+			$("#add").click(function() {
+				var a = $("#clc1").val();
+				var b = $("#clc2").val();
+				$("#result").html(+a + +b);
+
+			});
+
+		
+			$("#sub").click(function() {
+				var a = $("#clc1").val();
+				var b = $("#clc2").val();
+				$("#result").html(+a - +b);
+			});
+
+			
+			$("#mul").click(function() {
+				var a = $("#clc1").val();
+				var b = $("#clc2").val();
+				$("#result").html(+a * +b);
+			});
+
+		
+			$("#div").click(function() {
+				var a = $("#clc1").val();
+				var b = $("#clc2").val();
+				$("#result").html(+a / +b);
+
+			});
+
+		});
+	</script>
+	<style>
+		.result {
+			font-size: xx-large;
+			color: blue;
+		}
+		 .btn{
+			border-radius: 50%;
+			background-color:orange;
+			width:20%;
+			height: 50px;
+			font-weight: bold;
+			font-size: 20px;
+            box-shadow: 7px 7px blue;
+		}
+		#clc1{
+			background-color:white;
+			border:3px solid navy;
+	       padding: 10px;
+           margin: 2px;
+           border-radius:8px;
+            box-shadow: 7px 7px blue;
+		}
+		#clc2{
+			background-color:white;
+			border:3px solid navy;
+	       padding: 10px;
+           margin: 2px;
+           border-radius:8px;
+            box-shadow: 7px 7px blue;
+		}
+		div {
+  background-color: royalblue;
+  width: 200px;
+  border-radius:8px;
+  border: 3px solid navy;
+  padding: 40px;
+  margin: 5px;
+  box-shadow: 7px 7px grey;
+}
+#result{
+	border:3px solid navy;
+	background-color: #FFFF66;
+	padding: 20px;
+  margin: 2px;
+  border-radius:8px;
+  box-shadow: 7px 7px blue;
+}
+h3 {
+	color:white;
+	font-size: 25px;
+}
+
+	</style>
+</head>
+
+<body>
+
+
+	<div><h3><center>Simple Calculator</h3><br>
+
+		<input type="text" id="clc1"placeholder="Enter 1st Number"><br><br>
+		<input type="text" id="clc2" placeholder="Enter 2nd Number"><br><br>
+
+
+		<button type="button" id="add" class="btn"> + </button>
+		<button type="button" id="sub"class="btn"> - </button>
+		<button type="button" id="mul"class="btn"> * </button>
+		<button type="button" id="div"class="btn"> /</button><br><br><br>
+		<p id="result" placeholder="output"></p>
+
+	</div>
+</body>
+
+</html>
